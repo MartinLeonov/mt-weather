@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/forecastFragment">
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.martin.mt_weather.ForecastFragment"
+        android:label="fragment_forecast"
+        tools:layout="@layout/fragment_forecast" >
+        <action
+            android:id="@+id/action_forecastFragment_to_forecastDetail"
+            app:destination="@id/forecastDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastDetail"
+        android:name="com.martin.mt_weather.tabs.forecast.ForecastDetail"
+        android:label="fragment_forecast_detail"
+        tools:layout="@layout/weather_detail" >
+        <action
+            android:id="@+id/action_forecastDetail_to_forecastFragment"
+            app:destination="@id/forecastFragment" />
+    </fragment>
+</navigation>
